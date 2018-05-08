@@ -18,7 +18,7 @@ fi
 
 # De nuevo, no confío en mis usuarios
 if [ -z "$(echo $input | awk 'BEGIN {FS="|" } { print $2 }')" ]; then
-	zenity --width=560 --warning="No se especificó un objetivo" --text="<b> No se especificó un objetivo.</b>\n\n Claramente no ssbes leer, ahora corrige tu cagadero. EX: /home/$USER/movie.iso\n\n Regresar al menú ..."
+	zenity --width=560 --warning="No se especificó un objetivo" --text="<b> No se especificó un objetivo.</b>\n\n Claramente no sabes leer, ahora corrige tu cagadero. EX: /home/$USER/movie.iso\n\n Regresar al menú ..."
 	menu
 fi
 
