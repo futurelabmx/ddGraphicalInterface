@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function menu 
+function menu()
 {
 	#Diálogo de inicio
 	input=$(zenity --title="FutureLab DD GUI" --width=480 --text "Ingrese la fuente y el objetivo" --forms --add-entry "Fuente" --add-entry "objetivo")
@@ -8,7 +8,7 @@ function menu
 	ret=$?
 
 	#En caso de que el botón de inicio sea presionado el programa se terminará alv
-	[[ $ret -eq 1]] && exit 0
+	[$ret -eq 1] && exit 0
 
 	#Excepciones, ni yo confío en mis usuarios
 if [ -z "$(echo $input | awk 'BEGIN {FS="|" } { print $1 }')" ]; then
@@ -43,4 +43,3 @@ zenity --info --width=560 --title="Fin .. " --timeout 20 --text="<b>éxito:</b><
 
 exit 0
 # Aqui se acapa el mingorote
-}
